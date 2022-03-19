@@ -1,6 +1,6 @@
 import { CheckCircleIcon } from "@heroicons/react/solid";
 
-function success() {
+function Success() {
   return (
     <div className="flex justify-center items-center h-screen bg-slate-100">
       <div className="max-w-screen-lg mx-auto flex justify-center items-center">
@@ -14,4 +14,4 @@ function success() {
   );
 }
 
-export default success;
+export default Success;

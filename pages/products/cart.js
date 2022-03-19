@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import Product from "../../components/Product";
 
-function cart() {
+function Cart() {
   const router = useRouter();
   const [clicked, setClicked] = useState(false);
   const state = useSelector((state) => state.products);
@@ -55,4 +55,4 @@ function cart() {
   );
 }
 
-export default cart;
+export default Cart;

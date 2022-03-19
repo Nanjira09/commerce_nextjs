@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { useRouter } from "next/router";
 import Product from "../../components/Product";
 
-function favorite() {
+function Favorite() {
   const router = useRouter();
   const state = useSelector((state) => state.products);
   const fav = state.filter((product) => product.favorite === true);
@@ -20,4 +20,4 @@ function favorite() {
   );
 }
 
-export default favorite;
+export default Favorite;
