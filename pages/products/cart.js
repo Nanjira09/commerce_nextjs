@@ -1,7 +1,7 @@
 import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Product from "../../components/Product";
 
@@ -31,9 +31,11 @@ function Cart() {
     if (result.error) alert(result.error.message);
   };
 
-  if (cart.length === 0) {
-    router.replace("/");
-  }
+  useEffect(() => {
+    if (cart.length === 0) {
+      router.replace("/");
+    }
+  });
   return (
     <>
       <div className="grid p-2 mt-8 gap-1 md:grid-cols-3 lg:grid-cols-4">
